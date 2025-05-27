@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+        #welcomeBanner {
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .highlight { background: yellow; padding: 2px 5px; }
+    </style>
+</head>
+<body>
+    <div id="welcomeBanner">
+        <h2>Hello, Resident!</h2>
+        <p>Welcome back! <span style="color:red; font-weight:bold;">Special offer</span> today.</p>
+        <p class="highlight">Join our next event!</p>
+    </div>
+</body>
+</html>

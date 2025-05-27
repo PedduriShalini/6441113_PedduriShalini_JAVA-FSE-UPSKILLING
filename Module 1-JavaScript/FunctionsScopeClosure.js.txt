@@ -1,0 +1,25 @@
+function addEvent(name, category) {
+    return { name, category };
+}
+
+function registerUser(event) {
+    console.log(`User registered for ${event.name}`);
+}
+
+function filterEventsByCategory(events, category) {
+    return events.filter(e => e.category === category);
+}
+
+// Closure to track registration count
+function registrationCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
+    };
+}
+
+const countMusic = registrationCounter();
+
+console.log(countMusic());
+console.log(countMusic());

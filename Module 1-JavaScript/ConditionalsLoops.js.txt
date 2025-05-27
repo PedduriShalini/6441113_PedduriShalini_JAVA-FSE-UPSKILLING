@@ -1,0 +1,27 @@
+const events = [
+    { name: "Yoga Day", date: "2025-06-10", seats: 10 },
+    { name: "Old Meetup", date: "2024-05-01", seats: 0 },
+];
+
+events.forEach(event => {
+    if (new Date(event.date) > new Date() && event.seats > 0) {
+        console.log(`Valid Event: ${event.name}`);
+    } else {
+        console.log(`Invalid or Full: ${event.name}`);
+    }
+});
+
+function register(event) {
+    try {
+        if (event.seats > 0) {
+            event.seats--;
+            console.log("Registered!");
+        } else {
+            throw "No seats available!";
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+register(events[0]);

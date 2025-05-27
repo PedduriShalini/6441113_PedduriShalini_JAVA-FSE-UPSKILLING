@@ -1,0 +1,13 @@
+SELECT 
+    events.title AS event_name,
+    COUNT(sessions.session_id) AS scheduled_sessions
+FROM 
+    Events AS events
+LEFT JOIN 
+    Sessions AS sessions ON events.event_id = sessions.event_id
+WHERE 
+    events.status = 'upcoming'
+GROUP BY 
+    events.event_id, events.title
+ORDER BY 
+    scheduled_sessions DESC;

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preferences</title>
+</head>
+<body>
+    <select id="eventType">
+        <option>Festival</option>
+        <option>Workshop</option>
+    </select>
+    <button onclick="localStorage.setItem('pref', document.getElementById('eventType').value)">
+        Save
+    </button>
+    <button onclick="localStorage.clear()">Clear</button>
+    <script>
+        if (localStorage.getItem('pref')) {
+            document.getElementById('eventType').value = localStorage.getItem('pref');
+        }
+    </script>
+</body>
+</html>

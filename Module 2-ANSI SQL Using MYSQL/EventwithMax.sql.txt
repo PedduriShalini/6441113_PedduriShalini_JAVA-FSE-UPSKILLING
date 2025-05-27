@@ -1,0 +1,20 @@
+WITH SessionCounts AS (
+    SELECT 
+        event_id,
+        COUNT(*) AS session_count
+    FROM 
+        Sessions
+    GROUP BY 
+        event_id
+)
+SELECT 
+    e.title AS event_name,
+    sc.session_count
+FROM 
+    Events e
+JOIN 
+    SessionCounts sc ON e.event_id = sc.event_id
+WHERE 
+    sc.session_count = (SELECT MAX(session_count) FROM SessionCounts)
+ORDER BY 
+    e.title;

@@ -1,0 +1,24 @@
+/* Link styles */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ff0000;
+}
+
+/* List styles */
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #ddd;
+}

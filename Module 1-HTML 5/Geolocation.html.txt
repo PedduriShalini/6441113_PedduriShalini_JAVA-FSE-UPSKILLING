@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Events</title>
+</head>
+<body>
+    <button onclick="navigator.geolocation.getCurrentPosition(
+        pos => alert(`Lat: ${pos.coords.latitude}, Long: ${pos.coords.longitude}`),
+        err => alert('Error: ' + err.message)
+    )">Find Nearby Events</button>
+</body>
+</html>

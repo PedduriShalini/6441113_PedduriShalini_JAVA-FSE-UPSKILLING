@@ -1,0 +1,6 @@
+<button class="btn btn-outline-secondary">
+  <i class="bi bi-trash"></i>
+</button>
+<button class="btn btn-outline-success">
+  <i class="bi bi-check-lg"></i>
+</button>

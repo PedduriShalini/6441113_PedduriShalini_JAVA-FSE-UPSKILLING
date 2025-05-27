@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Event Portal</title>
+    
+    <!-- Internal CSS for quick prototyping -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="help.html" target="_blank">Help</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <section id="home">
+            <h1>Welcome to Our Community Portal</h1>
+        </section>
+        
+        <section id="events">
+            <!-- Events will be loaded here -->
+        </section>
+        
+        <section id="contact">
+            <!-- Contact form will go here -->
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Community Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

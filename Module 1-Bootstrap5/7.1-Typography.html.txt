@@ -1,0 +1,3 @@
+<h1 class="display-1">Display Heading</h1>
+<p class="lead">Lead paragraph</p>
+<p class="text-muted fw-bold">Muted and bold text</p>

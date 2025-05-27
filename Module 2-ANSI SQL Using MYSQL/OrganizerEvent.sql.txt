@@ -1,0 +1,14 @@
+SELECT 
+    organizers.full_name AS organizer_name,
+    COUNT(events.event_id) AS total_events_created,
+    SUM(CASE WHEN events.status = 'upcoming' THEN 1 ELSE 0 END) AS upcoming_events,
+    SUM(CASE WHEN events.status = 'completed' THEN 1 ELSE 0 END) AS completed_events,
+    SUM(CASE WHEN events.status = 'cancelled' THEN 1 ELSE 0 END) AS cancelled_events
+FROM 
+    Events AS events
+INNER JOIN 
+    Users AS organizers ON events.organizer_id = organizers.user_id
+GROUP BY 
+    organizers.user_id, organizers.full_name
+ORDER BY 
+    total_events_created DESC;

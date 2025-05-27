@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Video</title>
+</head>
+<body>
+    <video controls oncanplay="console.log('Video ready!')">
+        <source src="event.mp4" type="video/mp4">
+        Your browser doesn't support videos.
+    </video>
+</body>
+</html>

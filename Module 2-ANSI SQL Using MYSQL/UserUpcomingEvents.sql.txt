@@ -1,0 +1,16 @@
+SELECT 
+    events.title AS event_name,
+    events.start_date AS event_date,
+    events.city AS event_location
+FROM 
+    Events AS events
+INNER JOIN 
+    Registrations AS registrations ON events.event_id = registrations.event_id
+INNER JOIN 
+    Users AS users ON registrations.user_id = users.user_id
+WHERE 
+    events.status = 'upcoming'
+    AND events.city = users.city
+    AND users.user_id = 3  -- Replace with specific user ID
+ORDER BY 
+    events.start_date ASC;

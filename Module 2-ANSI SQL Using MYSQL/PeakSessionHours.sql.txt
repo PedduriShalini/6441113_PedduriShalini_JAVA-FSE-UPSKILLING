@@ -1,0 +1,10 @@
+SELECT 
+    events.title AS event_name,
+    COUNT(sessions.session_id) AS morning_sessions_count
+FROM 
+    Events AS events
+LEFT JOIN 
+    Sessions AS sessions ON events.event_id = sessions.event_id
+    AND TIME(sessions.start_time) BETWEEN '10:00:00' AND '12:00:00'
+GROUP BY 
+    events.event_id, events.title;

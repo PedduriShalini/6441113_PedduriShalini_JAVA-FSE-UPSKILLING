@@ -1,0 +1,7 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col p-4 border">Basic</div>
+    <div class="col p-4 border">Standard</div>
+    <div class="col p-4 border">Premium</div>
+  </div>
+</div>

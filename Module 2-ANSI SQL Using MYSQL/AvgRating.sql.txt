@@ -1,0 +1,12 @@
+SELECT 
+    city,
+    ROUND(AVG(rating), 2) AS avg_rating,
+    COUNT(*) AS total_reviews
+FROM 
+    Events e
+JOIN 
+    Feedback f ON e.event_id = f.event_id
+GROUP BY 
+    city
+ORDER BY 
+    avg_rating DESC;

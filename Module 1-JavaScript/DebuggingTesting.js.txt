@@ -1,0 +1,15 @@
+function debugSubmit(formData) {
+    console.log("Submitting:", formData);
+
+    try {
+        fetch("/submit", {
+            method: "POST",
+            body: JSON.stringify(formData)
+        })
+        .then(res => res.json())
+        .then(data => console.log("Response:", data))
+        .catch(err => console.error("Network error", err));
+    } catch (e) {
+        console.error("Submission failed", e);
+    }
+}

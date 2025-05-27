@@ -1,0 +1,14 @@
+SELECT 
+    events.title AS event_name,
+    ROUND(AVG(feedback.rating), 2) AS average_rating,
+    COUNT(feedback.feedback_id) AS review_count
+FROM 
+    Events AS events
+INNER JOIN 
+    Feedback AS feedback ON events.event_id = feedback.event_id
+GROUP BY 
+    events.event_id, events.title
+HAVING 
+    COUNT(feedback.feedback_id) >= 10
+ORDER BY 
+    average_rating DESC;

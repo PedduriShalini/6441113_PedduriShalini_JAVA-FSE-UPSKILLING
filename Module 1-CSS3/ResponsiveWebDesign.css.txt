@@ -1,0 +1,27 @@
+nav ul {
+    flex-direction: column;
+}
+
+.event-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+    }
+    
+    .event-image {
+        width: 50%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .container {
+        width: 80vw;
+        margin: 0 auto;
+    }
+}

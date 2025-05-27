@@ -1,0 +1,14 @@
+function submitRegistration(data) {
+    setTimeout(() => {
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(result => console.log("Success:", result))
+        .catch(err => console.error("Error:", err));
+    }, 2000);
+}
+
+submitRegistration({ name: "Alice", event: "Music Fest" });

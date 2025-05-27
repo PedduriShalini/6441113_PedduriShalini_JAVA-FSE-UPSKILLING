@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Gallery</title>
+    <style>
+        .event-img { 
+            border: 2px solid #ddd; 
+            width: 200px; 
+            margin: 10px; 
+        }
+        table { border-collapse: collapse; }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Past Events</caption>
+        <tr>
+            <td>
+                <img src="event1.jpg" alt="Festival" class="event-img" title="Summer Festival">
+                <p>Annual Festival</p>
+            </td>
+            <td>
+                <img src="event2.jpg" alt="Workshop" class="event-img" title="DIY Workshop">
+                <p>Creative Workshop</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

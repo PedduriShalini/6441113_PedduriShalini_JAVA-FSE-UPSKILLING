@@ -1,0 +1,12 @@
+SELECT 
+    users.city,
+    COUNT(DISTINCT registrations.user_id) AS active_users_count
+FROM 
+    Registrations AS registrations
+INNER JOIN 
+    Users AS users ON registrations.user_id = users.user_id
+GROUP BY 
+    users.city
+ORDER BY 
+    active_users_count DESC
+LIMIT 5;

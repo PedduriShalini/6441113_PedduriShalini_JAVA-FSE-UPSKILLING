@@ -1,0 +1,16 @@
+SELECT 
+    users.full_name AS user_name,
+    events.title AS event_name,
+    feedback.rating,
+    feedback.comments,
+    feedback.feedback_date
+FROM 
+    Feedback AS feedback
+INNER JOIN 
+    Users AS users ON feedback.user_id = users.user_id
+INNER JOIN 
+    Events AS events ON feedback.event_id = events.event_id
+WHERE 
+    feedback.rating < 3
+ORDER BY 
+    feedback.rating ASC, feedback.feedback_date DESC;

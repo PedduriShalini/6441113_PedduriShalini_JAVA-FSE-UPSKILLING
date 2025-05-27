@@ -1,0 +1,20 @@
+.eventCard {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 15px 0;
+    outline: 2px solid transparent;
+    transition: outline 0.3s ease;
+}
+
+.eventCard:hover {
+    outline-color: #007BFF;
+}
+
+.hidden-element {
+    visibility: hidden; /* Keeps space reserved */
+}
+
+.removed-element {
+    display: none; /* Removes from layout */
+}

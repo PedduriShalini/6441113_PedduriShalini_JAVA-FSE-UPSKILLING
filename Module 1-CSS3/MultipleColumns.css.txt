@@ -1,0 +1,12 @@
+.news-article {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid #ccc;
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+    .news-article {
+        column-count: 1;
+    }
+}

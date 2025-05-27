@@ -1,0 +1,12 @@
+SELECT 
+    events.title AS event_name,
+    SUM(CASE WHEN resources.resource_type = 'pdf' THEN 1 ELSE 0 END) AS pdf_files,
+    SUM(CASE WHEN resources.resource_type = 'image' THEN 1 ELSE 0 END) AS images,
+    SUM(CASE WHEN resources.resource_type = 'link' THEN 1 ELSE 0 END) AS links,
+    COUNT(resources.resource_id) AS total_resources
+FROM 
+    Events AS events
+LEFT JOIN 
+    Resources AS resources ON events.event_id = resources.event_id
+GROUP BY 
+    events.event_id, events.title;

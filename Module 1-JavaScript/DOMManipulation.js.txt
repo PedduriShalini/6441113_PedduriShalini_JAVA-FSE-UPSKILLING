@@ -1,0 +1,10 @@
+const container = document.querySelector("#eventList");
+
+const event = {
+    name: "Food Festival",
+    date: "2025-07-01"
+};
+
+const card = document.createElement("div");
+card.textContent = `${event.name} on ${event.date}`;
+container.appendChild(card);

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+</head>
+<body>
+    <h2>Feedback</h2>
+    <textarea onkeyup="document.getElementById('count').innerText = this.value.length"></textarea>
+    <p>Characters: <span id="count">0</span></p>
+    <button onclick="alert('Submitted!')">Submit</button>
+</body>
+</html>

@@ -1,0 +1,15 @@
+SELECT 
+    events.title AS event_name,
+    COUNT(registrations.registration_id) AS registration_count
+FROM 
+    Events AS events
+INNER JOIN 
+    Registrations AS registrations ON events.event_id = registrations.event_id
+LEFT JOIN 
+    Feedback AS feedback ON events.event_id = feedback.event_id
+WHERE 
+    feedback.feedback_id IS NULL
+GROUP BY 
+    events.event_id, events.title
+HAVING 
+    COUNT(registrations.registration_id) > 0;

@@ -1,0 +1,11 @@
+let events = [
+    { name: "Music Night", category: "music" },
+    { name: "Tech Talk", category: "tech" }
+];
+
+events.push({ name: "Jazz Concert", category: "music" });
+
+const musicEvents = events.filter(e => e.category === "music");
+
+const formatted = events.map(e => `Event: ${e.name}`);
+console.log(formatted);

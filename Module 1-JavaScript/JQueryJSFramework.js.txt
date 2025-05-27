@@ -1,0 +1,9 @@
+$('#registerBtn').click(function() {
+    alert("Registered using jQuery!");
+});
+
+$('.eventCard').fadeIn();
+$('.eventCard').fadeOut();
+
+// Benefit of using frameworks:
+console.log("React provides component-based architecture and better scalability.");

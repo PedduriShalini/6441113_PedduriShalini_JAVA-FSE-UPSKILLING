@@ -1,0 +1,6 @@
+css/: Contains Bootstrap stylesheets.
+
+js/: Contains Bootstrap JavaScript files.
+
+icons/: Contains Bootstrap icons for UI components.
+

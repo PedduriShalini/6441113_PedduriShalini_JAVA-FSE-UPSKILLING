@@ -1,0 +1,14 @@
+SELECT 
+    users.user_id,
+    users.full_name,
+    users.email,
+    MAX(registrations.registration_date) AS last_registration_date
+FROM 
+    Users AS users
+LEFT JOIN 
+    Registrations AS registrations ON users.user_id = registrations.user_id
+GROUP BY 
+    users.user_id, users.full_name, users.email
+HAVING 
+    last_registration_date IS NULL 
+    OR last_registration_date < DATE_SUB(CURRENT_DATE, INTERVAL 90 DAY);

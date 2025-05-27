@@ -1,0 +1,4 @@
+npm init -y
+npm install bootstrap sass
+@import "node_modules/bootstrap/scss/bootstrap";
+npx sass custom.scss custom.css

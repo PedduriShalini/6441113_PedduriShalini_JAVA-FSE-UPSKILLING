@@ -1,0 +1,8 @@
+const eventName = "Music Fest";
+const eventDate = "2025-06-15";
+let seats = 50;
+
+console.log(`Event: ${eventName}, Date: ${eventDate}, Available Seats: ${seats}`);
+
+seats--; // one registration
+console.log(`Seats after registration: ${seats}`);

@@ -1,0 +1,29 @@
+/* Universal selector */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Element selector */
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* ID selector */
+#mainHeader {
+    background: linear-gradient(to right, #0062ff, #00a1ff);
+    padding: 20px;
+}
+
+/* Class selector */
+.eventCard {
+    border: 1px solid #eee;
+    padding: 15px;
+}
+
+/* Grouping selector */
+h3, p {
+    line-height: 1.6;
+    color: #444;
+}

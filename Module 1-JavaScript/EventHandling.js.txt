@@ -1,0 +1,11 @@
+document.getElementById("registerBtn").onclick = function() {
+    alert("Registered!");
+};
+
+document.getElementById("categoryFilter").onchange = function(e) {
+    console.log("Category selected:", e.target.value);
+};
+
+document.getElementById("searchBox").addEventListener("keydown", function(e) {
+    console.log("Searching for:", e.target.value);
+});
