@@ -1,0 +1,25 @@
+// In module com.utils
+module com.utils {
+    exports com.utils;
+}
+
+package com.utils;
+public class Helper {
+    public static void greet() {
+        System.out.println("Hello from Utils!");
+    }
+}
+
+// In module com.greetings
+module com.greetings {
+    requires com.utils;
+}
+
+package com.greetings;
+import com.utils.Helper;
+
+public class Main {
+    public static void main(String[] args) {
+        Helper.greet();
+    }
+}

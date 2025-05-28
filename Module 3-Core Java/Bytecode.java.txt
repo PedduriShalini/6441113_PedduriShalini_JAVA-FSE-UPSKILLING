@@ -1,0 +1,5 @@
+public class JavapDemo {
+    public static void main(String[] args) {
+        System.out.println("Use 'javap -c JavapDemo' in terminal to inspect bytecode.");
+    }
+}

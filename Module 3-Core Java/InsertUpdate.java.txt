@@ -1,0 +1,38 @@
+import java.sql.*;
+import java.util.Scanner;
+
+public class InsertUpdateStudent {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/testdb";
+        String user = "root";
+        String pass = "password";
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            Connection conn = DriverManager.getConnection(url, user, pass);
+            System.out.print("Enter student name to insert: ");
+            String name = sc.nextLine();
+
+            PreparedStatement insert = conn.prepareStatement("INSERT INTO students(name) VALUES(?)");
+            insert.setString(1, name);
+            insert.executeUpdate();
+            System.out.println("Student inserted.");
+
+            System.out.print("Enter ID to update: ");
+            int id = sc.nextInt();
+            sc.nextLine(); // consume newline
+            System.out.print("Enter new name: ");
+            String newName = sc.nextLine();
+
+            PreparedStatement update = conn.prepareStatement("UPDATE students SET name = ? WHERE id = ?");
+            update.setString(1, newName);
+            update.setInt(2, id);
+            update.executeUpdate();
+            System.out.println("Student updated.");
+
+            conn.close();
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}

@@ -1,0 +1,30 @@
+import java.lang.reflect.Method;
+
+class Sample {
+    public void show() {
+        System.out.println("Show method called");
+    }
+
+    public void greet(String name) {
+        System.out.println("Hello " + name);
+    }
+}
+
+public class ReflectionDemo {
+    public static void main(String[] args) {
+        try {
+            Class<?> cls = Class.forName("Sample");
+            Object obj = cls.getDeclaredConstructor().newInstance();
+
+            Method[] methods = cls.getDeclaredMethods();
+            for (Method m : methods) {
+                System.out.println("Method: " + m.getName());
+            }
+
+            Method greet = cls.getMethod("greet", String.class);
+            greet.invoke(obj, "Shalini");
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
